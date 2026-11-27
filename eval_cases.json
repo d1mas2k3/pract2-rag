@@ -1,0 +1,153 @@
+[
+  {
+    "id": "q01",
+    "group": "all",
+    "question": "Когда нужно отчитаться о тратах после служебной поездки?",
+    "relevant": [
+      {
+        "source": "all/expenses.md",
+        "section": "Авансовый отчёт"
+      }
+    ]
+  },
+  {
+    "id": "q02",
+    "group": "all",
+    "question": "Для чего нужна заявка ACC-42?",
+    "relevant": [
+      {
+        "source": "all/office.md",
+        "section": "Гостевые пропуска"
+      }
+    ]
+  },
+  {
+    "id": "q03",
+    "group": "all",
+    "question": "Когда вернуть выданный компьютер, если я ухожу из компании?",
+    "relevant": [
+      {
+        "source": "all/equipment.docx",
+        "section": "Возврат оборудования"
+      }
+    ]
+  },
+  {
+    "id": "q04",
+    "group": "all",
+    "question": "Куда переслать письмо, похожее на фишинг?",
+    "relevant": [
+      {
+        "source": "all/security.pdf",
+        "section": "Страница 1"
+      }
+    ]
+  },
+  {
+    "id": "q05",
+    "group": "all",
+    "question": "Как заблокировать потерянную карточку для входа в офис?",
+    "relevant": [
+      {
+        "source": "all/security.pdf",
+        "section": "Страница 2"
+      }
+    ]
+  },
+  {
+    "id": "q06",
+    "group": "all",
+    "question": "За сколько заранее подавать заявление на обычный отпуск?",
+    "relevant": [
+      {
+        "source": "all/leave.md",
+        "section": "Ежегодный отпуск"
+      }
+    ]
+  },
+  {
+    "id": "q07",
+    "group": "all",
+    "question": "В каком порядке согласовать поездку и купить билеты?",
+    "relevant": [
+      {
+        "source": "all/trips.md",
+        "section": "Согласование поездки"
+      }
+    ]
+  },
+  {
+    "id": "q08",
+    "group": "hr",
+    "question": "Кто принимает решение о включении кандидата в кадровый резерв?",
+    "relevant": [
+      {
+        "source": "hr/recruiting.md",
+        "section": "Кадровый резерв"
+      }
+    ]
+  },
+  {
+    "id": "q09",
+    "group": "hr",
+    "question": "Сколько времени хранятся материалы закрытого интервью?",
+    "relevant": [
+      {
+        "source": "hr/recruiting.md",
+        "section": "Материалы интервью"
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "group": "it",
+    "question": "На какой срок выдают временные права по IAM-31?",
+    "relevant": [
+      {
+        "source": "it/access.md",
+        "section": "Временные права"
+      }
+    ]
+  },
+  {
+    "id": "q11",
+    "group": "it",
+    "question": "Как часто проверяют возможность восстановить данные из бэкапа?",
+    "relevant": [
+      {
+        "source": "it/backup.md",
+        "section": "Восстановление"
+      }
+    ]
+  },
+  {
+    "id": "q12",
+    "group": "all",
+    "question": "Какие сроки действуют для согласования командировки и авансового отчёта?",
+    "relevant": [
+      {
+        "source": "all/trips.md",
+        "section": "Согласование поездки"
+      },
+      {
+        "source": "all/expenses.md",
+        "section": "Авансовый отчёт"
+      }
+    ]
+  },
+  {
+    "id": "q13",
+    "group": "all",
+    "question": "Что делать с пропуском приглашённого гостя и куда звонить при утрате своего пропуска?",
+    "relevant": [
+      {
+        "source": "all/office.md",
+        "section": "Гостевые пропуска"
+      },
+      {
+        "source": "all/security.pdf",
+        "section": "Страница 2"
+      }
+    ]
+  }
+]

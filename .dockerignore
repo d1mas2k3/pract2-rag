@@ -1,0 +1,7 @@
+**
+!requirements.txt
+!rag.py
+!eval_cases.json
+!verify_cases.json
+!corpus/
+!corpus/**

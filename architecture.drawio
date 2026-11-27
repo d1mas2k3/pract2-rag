@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" compressed="false">
+  <diagram id="rag-regulations" name="Поиск по регламентам">
+    <mxGraphModel dx="1500" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="760" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="RAG для корпоративных регламентов" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacing=0;fontFamily=Arial;fontSize=34;fontColor=#18263c;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="42" y="28" width="1380" height="47" />
+        </mxCell>
+        <mxCell id="subtitle" value="Подготовка документов, гибридный поиск и ответ с источником" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacing=0;fontFamily=Arial;fontSize=17;fontColor=#415575;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="43" y="80" width="1380" height="24" />
+        </mxCell>
+        <mxCell id="offline-bg" value="" style="rounded=1;arcSize=8;fillColor=#f6f8fc;strokeColor=#e1e7f1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="34" y="128" width="1432" height="212" />
+        </mxCell>
+        <mxCell id="online-bg" value="" style="rounded=1;arcSize=8;fillColor=#f6f8fc;strokeColor=#e1e7f1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="34" y="370" width="1432" height="278" />
+        </mxCell>
+        <mxCell id="offline-title" value="Подготовка индекса" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#18263c;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="146" width="420" height="28" />
+        </mxCell>
+        <mxCell id="online-title" value="Запрос сотрудника" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#18263c;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="390" width="420" height="28" />
+        </mxCell>
+        <mxCell id="docs" value="&lt;div style=&quot;font-size:17px;font-weight:700;color:#263b53&quot;&gt;Регламенты&lt;/div&gt;&lt;div style=&quot;margin-top:8px;font-size:14px;line-height:1.36;color:#18263c&quot;&gt;PDF · DOCX · Markdown&lt;br&gt;Версии файлов и группы&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=13;spacingRight=8;strokeWidth=1.25;fillColor=#ffffff;strokeColor=#bcc9da;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="209" width="207" height="94" />
+        </mxCell>
+        <mxCell id="ingest" value="&lt;div style=&quot;font-size:17px;font-weight:700;color:#214b83&quot;&gt;Извлечение текста&lt;/div&gt;&lt;div style=&quot;margin-top:8px;font-size:14px;line-height:1.36;color:#18263c&quot;&gt;Парсеры форматов&lt;br&gt;SHA-256 и группа доступа&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=13;spacingRight=8;strokeWidth=1.25;fillColor=#e9f2ff;strokeColor=#93b8ed;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="323" y="209" width="217" height="94" />
+        </mxCell>
+        <mxCell id="chunk" value="&lt;div style=&quot;font-size:17px;font-weight:700;color:#214b83&quot;&gt;Разбиение текста&lt;/div&gt;&lt;div style=&quot;margin-top:8px;font-size:14px;line-height:1.36;color:#18263c&quot;&gt;Разделы / страницы&lt;br&gt;Текст и координаты цитаты&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=13;spacingRight=8;strokeWidth=1.25;fillColor=#e9f2ff;strokeColor=#93b8ed;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="605" y="209" width="217" height="94" />
+        </mxCell>
+        <mxCell id="embed" value="&lt;div style=&quot;font-size:17px;font-weight:700;color:#205744&quot;&gt;Векторы фрагментов&lt;/div&gt;&lt;div style=&quot;margin-top:8px;font-size:14px;line-height:1.36;color:#18263c&quot;&gt;Qwen3-Embedding (Ollama)&lt;br&gt;Термы и веса BM25 (Python)&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=13;spacingRight=8;strokeWidth=1.25;fillColor=#e6f5ed;strokeColor=#8bc6ac;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="887" y="209" width="225" height="94" />
+        </mxCell>
+        <mxCell id="qdrant" value="&lt;div style=&quot;font-size:17px;font-weight:700;color:#533789&quot;&gt;Qdrant&lt;/div&gt;&lt;div style=&quot;margin-top:8px;font-size:14px;line-height:1.36;color:#18263c&quot;&gt;HNSW · разреженный индекс&lt;br&gt;Текст, источник и права&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=13;spacingRight=8;strokeWidth=1.25;fillColor=#f0ebff;strokeColor=#b4a3ea;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1197" y="209" width="246" height="94" />
+        </mxCell>
+        <mxCell id="employee" value="&lt;div style=&quot;font-size:17px;font-weight:700;color:#263b53&quot;&gt;Сотрудник&lt;/div&gt;&lt;div style=&quot;margin-top:8px;font-size:14px;line-height:1.36;color:#18263c&quot;&gt;Вопрос о регламенте&lt;br&gt;Группа доступа&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=13;spacingRight=8;strokeWidth=1.25;fillColor=#ffffff;strokeColor=#bcc9da;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="486" width="207" height="94" />
+        </mxCell>
+        <mxCell id="query" value="&lt;div style=&quot;font-size:17px;font-weight:700;color:#214b83&quot;&gt;Подготовка запроса&lt;/div&gt;&lt;div style=&quot;margin-top:8px;font-size:14px;line-height:1.36;color:#18263c&quot;&gt;Эмбеддинг и термы&lt;br&gt;Фильтр по группе&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=13;spacingRight=8;strokeWidth=1.25;fillColor=#e9f2ff;strokeColor=#93b8ed;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="323" y="486" width="217" height="94" />
+        </mxCell>
+        <mxCell id="retrieval" value="&lt;div style=&quot;font-size:17px;font-weight:700;color:#214b83&quot;&gt;Гибридный поиск&lt;/div&gt;&lt;div style=&quot;margin-top:8px;font-size:14px;line-height:1.36;color:#18263c&quot;&gt;Cosine + BM25 → RRF&lt;br&gt;До 5 доступных фрагментов&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=13;spacingRight=8;strokeWidth=1.25;fillColor=#e9f2ff;strokeColor=#93b8ed;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="605" y="486" width="217" height="94" />
+        </mxCell>
+        <mxCell id="generation" value="&lt;div style=&quot;font-size:17px;font-weight:700;color:#205744&quot;&gt;Отбор цитаты&lt;/div&gt;&lt;div style=&quot;margin-top:8px;font-size:14px;line-height:1.36;color:#18263c&quot;&gt;Qwen2.5 (Ollama)&lt;br&gt;Python возвращает оригинал&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=13;spacingRight=8;strokeWidth=1.25;fillColor=#e6f5ed;strokeColor=#8bc6ac;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="887" y="486" width="225" height="94" />
+        </mxCell>
+        <mxCell id="reply" value="&lt;div style=&quot;font-size:17px;font-weight:700;color:#263b53&quot;&gt;Результат&lt;/div&gt;&lt;div style=&quot;margin-top:8px;font-size:14px;line-height:1.36;color:#18263c&quot;&gt;Цитата с указанием источника&lt;br&gt;или ответ об отсутствии данных&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=13;spacingRight=8;strokeWidth=1.25;fillColor=#ffffff;strokeColor=#bcc9da;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1197" y="486" width="246" height="94" />
+        </mxCell>
+        <mxCell id="docs-ingest" value="файлы" edge="1" parent="1" source="docs" target="ingest" style="edgeStyle=segmentEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;labelBackgroundColor=#f6f8fc;fontFamily=Arial;fontSize=12;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;strokeColor=#59718f;fontColor=#415575;">
+          <mxGeometry as="geometry" x="0" y="0" relative="1">
+            <mxPoint as="offset" x="0" y="-12" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ingest-chunk" value="текст" edge="1" parent="1" source="ingest" target="chunk" style="edgeStyle=segmentEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;labelBackgroundColor=#f6f8fc;fontFamily=Arial;fontSize=12;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;strokeColor=#59718f;fontColor=#415575;">
+          <mxGeometry as="geometry" x="0" y="0" relative="1">
+            <mxPoint as="offset" x="0" y="-12" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chunk-embed" value="чанки" edge="1" parent="1" source="chunk" target="embed" style="edgeStyle=segmentEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;labelBackgroundColor=#f6f8fc;fontFamily=Arial;fontSize=12;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;strokeColor=#59718f;fontColor=#415575;">
+          <mxGeometry as="geometry" x="0" y="0" relative="1">
+            <mxPoint as="offset" x="0" y="-12" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="embed-index" value="векторы" edge="1" parent="1" source="embed" target="qdrant" style="edgeStyle=segmentEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;labelBackgroundColor=#f6f8fc;fontFamily=Arial;fontSize=12;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;strokeColor=#59718f;fontColor=#415575;">
+          <mxGeometry as="geometry" x="0" y="0" relative="1">
+            <mxPoint as="offset" x="0" y="-12" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="employee-query" value="вопрос" edge="1" parent="1" source="employee" target="query" style="edgeStyle=segmentEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;labelBackgroundColor=#f6f8fc;fontFamily=Arial;fontSize=12;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;strokeColor=#59718f;fontColor=#415575;">
+          <mxGeometry as="geometry" x="0" y="0" relative="1">
+            <mxPoint as="offset" x="0" y="-12" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="query-retrieval" value="запрос" edge="1" parent="1" source="query" target="retrieval" style="edgeStyle=segmentEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;labelBackgroundColor=#f6f8fc;fontFamily=Arial;fontSize=12;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;strokeColor=#59718f;fontColor=#415575;">
+          <mxGeometry as="geometry" x="0" y="0" relative="1">
+            <mxPoint as="offset" x="0" y="-12" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="retrieval-model" value="контекст" edge="1" parent="1" source="retrieval" target="generation" style="edgeStyle=segmentEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;labelBackgroundColor=#f6f8fc;fontFamily=Arial;fontSize=12;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;strokeColor=#59718f;fontColor=#415575;">
+          <mxGeometry as="geometry" x="0" y="0" relative="1">
+            <mxPoint as="offset" x="0" y="-12" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="model-reply" value="цитата" edge="1" parent="1" source="generation" target="reply" style="edgeStyle=segmentEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;labelBackgroundColor=#f6f8fc;fontFamily=Arial;fontSize=12;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;strokeColor=#59718f;fontColor=#415575;">
+          <mxGeometry as="geometry" x="0" y="0" relative="1">
+            <mxPoint as="offset" x="0" y="-12" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="retrieval-index" value="поисковый запрос с фильтром ↔ найденные фрагменты" edge="1" parent="1" source="retrieval" target="qdrant" style="edgeStyle=segmentEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1.5;labelBackgroundColor=#f6f8fc;fontFamily=Arial;fontSize=12;exitX=0.5;exitY=0;exitPerimeter=1;entryX=0.5;entryY=1;entryPerimeter=1;startArrow=block;startFill=1;strokeColor=#7450ab;fontColor=#533789;">
+          <mxGeometry as="geometry" x="0" y="0" relative="1">
+            <mxPoint as="offset" x="0" y="-12" />
+            <Array as="points">
+              <mxPoint x="714" y="423" />
+              <mxPoint x="1320" y="423" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="scope-note" value="В стенде группа передаётся через CLI. В рабочем сервисе её определяет корпоративная система доступа." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacing=0;fontFamily=Arial;fontSize=13;fontColor=#415575;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="55" y="602" width="1160" height="24" />
+        </mxCell>
+        <mxCell id="legend" value="Легенда" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacing=0;fontFamily=Arial;fontSize=14;fontColor=#18263c;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="43" y="684" width="80" height="26" />
+        </mxCell>
+        <mxCell id="key-neutral" value="" style="rounded=1;arcSize=25;fillColor=#ffffff;strokeColor=#bcc9da;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="133" y="687" width="20" height="20" />
+        </mxCell>
+        <mxCell id="legend-neutral" value="Источники и результат" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacing=0;fontFamily=Arial;fontSize=14;fontColor=#415575;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="163" y="684" width="220" height="26" />
+        </mxCell>
+        <mxCell id="key-python" value="" style="rounded=1;arcSize=25;fillColor=#e9f2ff;strokeColor=#93b8ed;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="393" y="687" width="20" height="20" />
+        </mxCell>
+        <mxCell id="legend-python" value="Приложение Python" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacing=0;fontFamily=Arial;fontSize=14;fontColor=#415575;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="423" y="684" width="220" height="26" />
+        </mxCell>
+        <mxCell id="key-model" value="" style="rounded=1;arcSize=25;fillColor=#e6f5ed;strokeColor=#8bc6ac;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="653" y="687" width="20" height="20" />
+        </mxCell>
+        <mxCell id="legend-model" value="Вызов модели Ollama" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacing=0;fontFamily=Arial;fontSize=14;fontColor=#415575;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="683" y="684" width="220" height="26" />
+        </mxCell>
+        <mxCell id="key-index" value="" style="rounded=1;arcSize=25;fillColor=#f0ebff;strokeColor=#b4a3ea;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="913" y="687" width="20" height="20" />
+        </mxCell>
+        <mxCell id="legend-index" value="Индекс и метаданные" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacing=0;fontFamily=Arial;fontSize=14;fontColor=#415575;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="943" y="684" width="220" height="26" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

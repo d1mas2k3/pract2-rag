@@ -1,0 +1,31 @@
+name: pract2-rag
+
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.15.5
+    volumes:
+      - qdrant-data:/qdrant/storage
+
+  ollama:
+    image: ollama/ollama:0.13.5
+    environment:
+      OLLAMA_MAX_LOADED_MODELS: "1"
+      OLLAMA_NUM_PARALLEL: "1"
+    volumes:
+      - ollama-models:/root/.ollama
+
+  app:
+    build: .
+    command: ["sleep", "infinity"]
+    environment:
+      QDRANT_URL: http://qdrant:6333
+      OLLAMA_URL: http://ollama:11434
+      EMBED_MODEL: qwen3-embedding:0.6b
+      CHAT_MODEL: qwen2.5:1.5b
+    depends_on:
+      - qdrant
+      - ollama
+
+volumes:
+  qdrant-data:
+  ollama-models:

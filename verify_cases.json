@@ -1,0 +1,50 @@
+[
+  {
+    "id": "pdf",
+    "group": "all",
+    "question": "По какой форме сообщают о подозрительном письме?",
+    "relevant": [
+      {
+        "source": "all/security.pdf",
+        "section": "Страница 1"
+      }
+    ],
+    "answer_contains": "SEC-17"
+  },
+  {
+    "id": "docx",
+    "group": "all",
+    "question": "Когда нужно вернуть ноутбук при увольнении?",
+    "relevant": [
+      {
+        "source": "all/equipment.docx",
+        "section": "Возврат оборудования"
+      }
+    ],
+    "answer_contains": "в последний рабочий день"
+  },
+  {
+    "id": "policy",
+    "group": "it",
+    "question": "На сколько часов выдают временные административные права?",
+    "relevant": [
+      {
+        "source": "it/access.md",
+        "section": "Временные права"
+      }
+    ],
+    "answer_contains": "8 часов"
+  },
+  {
+    "id": "closed",
+    "group": "all",
+    "question": "Сколько календарных дней хранят материалы закрытого интервью?",
+    "relevant": []
+  },
+  {
+    "id": "no_answer",
+    "group": "all",
+    "question": "Какая температура установлена на складе для хранения мороженого?",
+    "relevant": []
+  }
+]
